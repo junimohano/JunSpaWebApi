@@ -6,8 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace JunSpaWebApi.Controllers
 {
-    [ApiVersion("1")]
-    [Route("api/v{version:apiVersion}/[controller]")]
+    [Route("api/[controller]")]
     public class ValuesController : Controller
     {
         // GET api/values

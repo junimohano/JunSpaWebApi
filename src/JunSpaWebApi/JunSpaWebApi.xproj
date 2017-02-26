@@ -6,7 +6,7 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>1d2bc673-91c1-4bdc-a474-65fa45986bd3</ProjectGuid>
+    <ProjectGuid>05e550b4-f46a-4cfd-9cb5-a0bf83a00d6d</ProjectGuid>
     <RootNamespace>JunSpaWebApi</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
@@ -14,8 +14,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
-    <ApplicationInsightsResourceId>/subscriptions/51886058-653a-48b4-9ad1-242bee81f6d5/resourcegroups/JunSpaGroup/providers/microsoft.insights/components/JunSpaWebApi</ApplicationInsightsResourceId>
-    <ApplicationInsightsAnnotationResourceId>/subscriptions/51886058-653a-48b4-9ad1-242bee81f6d5/resourceGroups/JunSpaGroup/providers/microsoft.insights/components/JunSpaWebApi</ApplicationInsightsAnnotationResourceId>
+    <ApplicationInsightsResourceId>/subscriptions/51886058-653a-48b4-9ad1-242bee81f6d5/resourcegroups/JunSpaGroup/providers/microsoft.insights/components/JunSpa</ApplicationInsightsResourceId>
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet.Web\Microsoft.DotNet.Web.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>
