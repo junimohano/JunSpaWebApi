@@ -15,7 +15,7 @@
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
     <ApplicationInsightsResourceId>/subscriptions/51886058-653a-48b4-9ad1-242bee81f6d5/resourcegroups/JunSpaGroup/providers/microsoft.insights/components/JunSpaWebApi</ApplicationInsightsResourceId>
-    <ApplicationInsightsAnnotationResourceId>/subscriptions/51886058-653a-48b4-9ad1-242bee81f6d5/resourcegroups/Default-ApplicationInsights-EastUS/providers/microsoft.insights/components/JunSpaWebApi-1</ApplicationInsightsAnnotationResourceId>
+    <ApplicationInsightsAnnotationResourceId>/subscriptions/51886058-653a-48b4-9ad1-242bee81f6d5/resourceGroups/JunSpaGroup/providers/microsoft.insights/components/JunSpaWebApi</ApplicationInsightsAnnotationResourceId>
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet.Web\Microsoft.DotNet.Web.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>
