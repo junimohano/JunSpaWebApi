@@ -79,7 +79,6 @@ namespace JunSpaWebApi
 
             app.UseCors("AllowAll");
 
-            app.UseMvc();
 
             DbInitializer.Initialize(context);
 
@@ -105,6 +104,9 @@ namespace JunSpaWebApi
                 }
             };
             app.UseJwtBearerAuthentication(options);
+
+            // It should be after JwtBearerAuth
+            app.UseMvc();
         }
     }
 }

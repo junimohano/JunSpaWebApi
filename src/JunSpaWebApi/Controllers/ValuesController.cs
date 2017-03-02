@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.Authentication;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JunSpaWebApi.Controllers
@@ -11,17 +13,42 @@ namespace JunSpaWebApi.Controllers
     public class ValuesController : Controller
     {
         // GET api/values
+        [Authorize]
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IActionResult> Get()
         {
-            return new string[] { "value1", "value2" };
+            var data = new string[] { };
+            await Task.Run(() =>
+            {
+                Task.Delay(1000);
+                data = new string[] { "value1", "value2" };
+            });
+
+            return Ok(data);
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            return "value";
+            var data = string.Empty;
+            await Task.Run(() =>
+            {
+                data = $"get data : {id}";
+            });
+
+            return Ok(data);
+        }
+
+        // GET api/values/5
+        [Authorize]
+        [HttpGet]
+        [Route("test")]
+        public string GetTest()
+        {
+            const string data = "test";
+
+            return data;
         }
 
         // POST api/values
