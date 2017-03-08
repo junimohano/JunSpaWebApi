@@ -1,8 +1,8 @@
 using Newtonsoft.Json;
 
-namespace JunSpaWebApi.Models
+namespace JunSpaWebApi.DataModels
 {
-    public class OctagonGirlGalleryDto
+    public class OctagonGirlGallery
     {
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }

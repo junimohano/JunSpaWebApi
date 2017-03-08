@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace JunSpaWebApi.Models
+namespace JunSpaWebApi.DataModels
 {
-    public class OctagonGirlDto
+    public class OctagonGirl
     {
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
@@ -99,6 +99,6 @@ namespace JunSpaWebApi.Models
         public string Favoritetvshows { get; set; }
 
         [JsonProperty(PropertyName = "gallery")]
-        public IEnumerable<OctagonGirlGalleryDto> Gallery { get; set; }
+        public IEnumerable<OctagonGirlGallery> Gallery { get; set; }
     }
 }
