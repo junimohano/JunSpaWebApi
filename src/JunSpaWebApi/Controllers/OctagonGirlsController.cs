@@ -3,11 +3,13 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using JunSpaWebApi.Data;
 using JunSpaWebApi.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
 namespace JunSpaWebApi.Controllers
 {
+    [Authorize]
     [ApiVersion("1")]
     [Route("api/v{version:apiVersion}/[controller]")]
     public class OctagonGirlsController : Controller
@@ -21,5 +23,6 @@ namespace JunSpaWebApi.Controllers
 
             return Ok(result);
         }
+        
     }
 }

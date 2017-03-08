@@ -40,6 +40,11 @@ namespace JunSpaWebApi.Controllers
             return Ok(data);
         }
 
+        public string Test()
+        {
+            return "aaa";
+        }
+
         // GET api/values/5
         [Authorize]
         [HttpGet]
