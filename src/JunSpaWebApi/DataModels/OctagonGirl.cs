@@ -6,7 +6,7 @@ namespace JunSpaWebApi.DataModels
     public class OctagonGirl
     {
         [JsonProperty(PropertyName = "id")]
-        public string Id { get; set; }
+        public int? Id { get; set; }
 
         [JsonProperty(PropertyName = "twitter_feed_file_name")]
         public string TwitterFeedFileName { get; set; }
@@ -21,7 +21,7 @@ namespace JunSpaWebApi.DataModels
         public string TurnOns { get; set; }
 
         [JsonProperty(PropertyName = "height")]
-        public string Height { get; set; }
+        public double Height { get; set; }
 
         [JsonProperty(PropertyName = "country_residing")]
         public string CountryResiding { get; set; }
@@ -54,13 +54,13 @@ namespace JunSpaWebApi.DataModels
         public string LargeBodyPicture { get; set; }
 
         [JsonProperty(PropertyName = "octagon_girl_media_id")]
-        public string OctagonGirlMediaId { get; set; }
+        public int? OctagonGirlMediaId { get; set; }
 
         [JsonProperty(PropertyName = "date_of_birth")]
         public string DateOfBirth { get; set; }
 
         [JsonProperty(PropertyName = "weight")]
-        public string Weight { get; set; }
+        public double Weight { get; set; }
 
         [JsonProperty(PropertyName = "city_residing")]
         public string CityResiding { get; set; }

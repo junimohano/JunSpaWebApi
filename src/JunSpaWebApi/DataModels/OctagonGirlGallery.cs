@@ -5,7 +5,7 @@ namespace JunSpaWebApi.DataModels
     public class OctagonGirlGallery
     {
         [JsonProperty(PropertyName = "id")]
-        public string Id { get; set; }
+        public int? Id { get; set; }
 
         [JsonProperty(PropertyName = "thumbnail_path")]
         public string ThumbnailPath { get; set; }
@@ -17,10 +17,10 @@ namespace JunSpaWebApi.DataModels
         public string Caption { get; set; }
 
         [JsonProperty(PropertyName = "media_id")]
-        public string MediaId { get; set; }
+        public int? MediaId { get; set; }
 
         [JsonProperty(PropertyName = "gallery_order")]
-        public string GalleryOrder { get; set; }
+        public int? GalleryOrder { get; set; }
 
     }
 }

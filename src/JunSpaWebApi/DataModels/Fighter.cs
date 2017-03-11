@@ -6,19 +6,19 @@ namespace JunSpaWebApi.DataModels
     public class Fighter
     {
         [JsonProperty(PropertyName = "id")]
-        public string Id { get; set; }
+        public int? Id { get; set; }
 
         [JsonProperty(PropertyName = "nickname")]
         public string Nickname { get; set; }
 
         [JsonProperty(PropertyName = "wins")]
-        public string Wins { get; set; }
+        public int? Wins { get; set; }
 
         [JsonProperty(PropertyName = "statid")]
-        public string Statid { get; set; }
+        public int? Statid { get; set; }
 
         [JsonProperty(PropertyName = "losses")]
-        public string Losses { get; set; }
+        public int? Losses { get; set; }
 
         [JsonProperty(PropertyName = "last_name")]
         public string LastName { get; set; }
@@ -27,10 +27,10 @@ namespace JunSpaWebApi.DataModels
         public string WeightClass { get; set; }
 
         [JsonProperty(PropertyName = "title_holder")]
-        public string TitleHolder { get; set; }
+        public bool TitleHolder { get; set; }
 
         [JsonProperty(PropertyName = "draws")]
-        public string Draws { get; set; }
+        public int? Draws { get; set; }
 
         [JsonProperty(PropertyName = "first_name")]
         public string FirstName { get; set; }
@@ -46,6 +46,15 @@ namespace JunSpaWebApi.DataModels
 
         [JsonProperty(PropertyName = "thumbnail")]
         public string Thumbnail { get; set; }
+
+        [JsonProperty(PropertyName = "belt_thumbnail")]
+        public string BeltThumbnail { get; set; }
+
+        [JsonProperty(PropertyName = "left_full_body_image")]
+        public string LeftFullBodyImage { get; set; }
+
+        [JsonProperty(PropertyName = "right_full_body_image")]
+        public string RightFullBodyImage { get; set; }
 
         [JsonProperty(PropertyName = "profile_image")]
         public string ProfileImage { get; set; }
