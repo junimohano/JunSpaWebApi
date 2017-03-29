@@ -8,6 +8,8 @@
     <PackageId>JunSpaWebApi</PackageId>
     <RuntimeFrameworkVersion>1.1.1</RuntimeFrameworkVersion>
     <PackageTargetFallback>$(PackageTargetFallback);dotnet5.6;portable-net45+win8</PackageTargetFallback>
+    <ApplicationInsightsResourceId>/subscriptions/51886058-653a-48b4-9ad1-242bee81f6d5/resourcegroups/JunSpaGroup/providers/microsoft.insights/components/JunSpaWebApi</ApplicationInsightsResourceId>
+    <ApplicationInsightsAnnotationResourceId>/subscriptions/51886058-653a-48b4-9ad1-242bee81f6d5/resourceGroups/JunSpaGroup/providers/microsoft.insights/components/JunSpaWebApi</ApplicationInsightsAnnotationResourceId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -42,6 +44,10 @@
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Service References" />
   </ItemGroup>
 
 </Project>
