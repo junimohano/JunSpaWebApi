@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 
 namespace JunSpaWebApi.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [ApiVersion("1")]
     [Route("api/v{version:apiVersion}/[controller]")]
     public class OctagonGirlsController : Controller

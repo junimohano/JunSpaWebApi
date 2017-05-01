@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JunSpaWebApi.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [ApiVersion("1")]
     [Route("api/v{version:apiVersion}/[controller]")]
     public class BoardsController : Controller

@@ -8,12 +8,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace JunSpaWebApi.Controllers
 {
+    [Authorize]
     [ApiVersion("1")]
     [Route("api/v{version:apiVersion}/[controller]")]
     public class ValuesController : Controller
     {
         // GET api/values
-        [Authorize]
         [HttpGet]
         public async Task<IActionResult> Get()
         {
