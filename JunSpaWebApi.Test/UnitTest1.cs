@@ -28,8 +28,7 @@ namespace JunSpaWebApi.Test
             var options = new DbContextOptionsBuilder<JunSpaContext>()
                             .UseSqlServer("Server=tcp:junspadbserver.database.windows.net,1433;Initial Catalog=JunSpaDb;Persist Security Info=False;User ID=jun;Password=Qwer1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
                             .Options;
-
-
+            
             using (var context = new JunSpaContext(options))
             {
                 var vc = new BoardsController(context);
