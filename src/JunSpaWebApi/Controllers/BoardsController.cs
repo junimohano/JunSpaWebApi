@@ -23,18 +23,18 @@ namespace JunSpaWebApi.Controllers
         {
             _context = context;
         }
-        
+
         [HttpGet]
         public async Task<IActionResult> List()
         {
-            var boards = await _context.Boards.ToListAsync();
+            var boards = await _context.Boards.AsNoTracking().ToListAsync();
             return Ok(boards);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            var board = await _context.Boards.FirstOrDefaultAsync(x => x.BoardId == id);
+            var board = await _context.Boards.AsNoTracking().SingleOrDefaultAsync(x => x.BoardId == id);
             if (board == null) return NoContent();
 
             return Ok(board);
@@ -60,7 +60,7 @@ namespace JunSpaWebApi.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody]Board value)
         {
-            var board = _context.Boards.FirstOrDefault(x => x.BoardId == id);
+            var board = await _context.Boards.SingleOrDefaultAsync(x => x.BoardId == id);
             if (board == null) return NoContent();
 
             try
@@ -81,7 +81,7 @@ namespace JunSpaWebApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var board = _context.Boards.FirstOrDefault(x => x.BoardId == id);
+            var board = await _context.Boards.AsNoTracking().SingleOrDefaultAsync(x => x.BoardId == id);
             if (board == null) return NoContent();
 
             try
