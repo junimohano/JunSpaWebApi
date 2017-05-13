@@ -12,14 +12,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JunSpaWebApi.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [ApiVersion("1")]
     [Route("api/v{version:apiVersion}/[controller]")]
-    public class BoardsController : Controller
+    public class TestsController : Controller
     {
         private readonly JunSpaContext _context;
 
-        public BoardsController(JunSpaContext context)
+        public TestsController(JunSpaContext context)
         {
             _context = context;
         }
@@ -28,11 +28,25 @@ namespace JunSpaWebApi.Controllers
         public async Task<IActionResult> List()
         {
             var boards = await _context.Boards.AsNoTracking().ToListAsync();
-            return Ok(boards);
+            return Ok(boards);s
         }
+        /// <summary>
+        /// asdasd
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
 
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
+        {
+            var board = await _context.Boards.AsNoTracking().SingleOrDefaultAsync(x => x.BoardId == id);
+            if (board == null) return NotFound();
+
+            return Ok(board);
+        }
+
+        [HttpGet("{id}/comments/{test}")]
+        public async Task<IActionResult> GetComments(int id, int test, [FromQuery]string haha)
         {
             var board = await _context.Boards.AsNoTracking().SingleOrDefaultAsync(x => x.BoardId == id);
             if (board == null) return NotFound();

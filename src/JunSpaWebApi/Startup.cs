@@ -42,6 +42,10 @@ namespace JunSpaWebApi
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
 
+            services.AddRouting(x =>
+            {
+                x.LowercaseUrls = true;
+            });
             services.AddMvc();
 
             services.AddApiVersioning(o =>
