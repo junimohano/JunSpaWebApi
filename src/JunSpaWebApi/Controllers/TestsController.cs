@@ -28,14 +28,9 @@ namespace JunSpaWebApi.Controllers
         public async Task<IActionResult> List()
         {
             var boards = await _context.Boards.AsNoTracking().ToListAsync();
-            return Ok(boards);s
+            return Ok(boards);
         }
-        /// <summary>
-        /// asdasd
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-
+    
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
